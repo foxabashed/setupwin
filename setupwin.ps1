@@ -8,7 +8,7 @@ Start-Transcript
 # scoop
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Needed to run a remote script the first time
 Invoke-RestMethod get.scoop.sh | Invoke-Expression # Enable scoop
-scoop install git
+winget install --id=Git.Git  -e
 scoop bucket add main # Add the main bucket for scoop
 scoop bucket add extras # Add the extras bucket for scoop
 
@@ -28,6 +28,7 @@ winget install -e --id Microsoft.PowerToys # PowerToys
 winget install -e --id qBittorrent.qBittorrent #qBittorrent
 winget install -e --id OBSProject.OBSStudio # OBS Studio
 winget install --id=7zip.7zip -e # 7Zip
+winget install --id=FilesCommunity.Files -e # Files App
 
 # via scoop
 scoop install tar # Tar
@@ -57,7 +58,7 @@ Write-Output "
 4) Firefox
 5) LibreWolf
 6) Brave
-7) None of the above
+Type in anything else if you don't want to install a browser.
 "
 # Ask the user which browser they want to install
 $BROWSER = Read-Host -Prompt "Enter the number of the browser you want to install"
