@@ -1,5 +1,5 @@
 # setupwin.ps1
-# This Python file is a post-install setup script for Windows.
+# This PowerShell file is a post-install setup script for Windows.
 
 # Start logs
 Start-Transcript
