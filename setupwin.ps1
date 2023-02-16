@@ -13,7 +13,6 @@ scoop bucket add main # Add the main bucket for scoop
 scoop bucket add extras # Add the extras bucket for scoop
 
 # choco
-# Install chocolatey ↓
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
@@ -63,7 +62,7 @@ Type in anything else if you don't want to install a browser.
 # Ask the user which browser they want to install
 $BROWSER = Read-Host -Prompt "Enter the number of the browser you want to install"
 # Check What browser number the user typed in
-if (BROWSER -eq "1") {
+if ($BROWSER -eq "1") {
     winget install --id=Google.Chrome  -e # Install Google Chrome
 }
 elseif ($BROWSER -eq "2") {
